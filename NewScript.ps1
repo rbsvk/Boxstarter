@@ -1,4 +1,6 @@
 # Before launching this scrip install BoxStarter from Boxstarter.org / official site(unzip and run with administrator rights) package.
+# Launch Boxstarter Shell and type Install-BoxstarterPackage 
+# Below that command paste link for RAW data https://raw.githubusercontent.com/rbsvk/Boxstarter/master/NewScript.ps1
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showFileExtensions
 Enable-RemoteDesktop
 cinst IIS-WebServerRole -source windowsfeatures
