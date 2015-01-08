@@ -36,7 +36,14 @@ cinst msysgit
 cinst SourceCodePro
 cinst GitHub
 cinst SourceTree
-choco install MsSqlServerManagementStudio2014Expr
+cinst redis-64
+cinst silverlight
+openoffice
+pdfcreator
+picasa
+powergui
+powerguivsx
+cinst MsSqlServerManagementStudio2014Expr
 cinst VisualStudio2013Professional -InstallArguments "WebTools"
 cinst powershell4
 cinst powershell
@@ -59,7 +66,7 @@ cinst libreoffice
 cinst thunderbird
 cinst winrar
 cinst javaruntime
-choco install java.jdk
+cinst java.jdk
 cinst flashplayeractivex
 cinst flashplayerplugin
 cinst python 
@@ -78,8 +85,8 @@ cinst msvisualcplusplus2012-redist
 cinst msvisualcplusplus2013-redist
 cinst nsclientplusplus.x86
 cinst nsclientplusplus.x64
-choco install AdobeAIR
-choco install golang
+cinst AdobeAIR
+cinst golang
 cinst directx
 cinst logparser
 cinst fiddler4
@@ -89,6 +96,9 @@ cinst 7zip
 cinst TeraCopy
 cinst vlc
 cinst dropbox
+cinst googledrive
+cinst onedrive
+cinst skydrive
 cinst webpi
 cinst cyberduck
 cinst OptiPNG
@@ -106,6 +116,7 @@ cinst Chromium
 cinst Firefox
 cinst opencodecs
 cinst quicktime
+cinst cccp
 cinst k-litecodecpackmega
 cinst libjpeg-turbo
 cinst ffmpeg
@@ -152,26 +163,58 @@ cinst cpu-z
 cinst wifi-manager
 cinst redis-desktop-manager
 cinst wireshark
+cinst filebot
 cinst filetypesman
+cinst revo.uninstaller
+cinst glaryutilities
+cinst growl
+cinst system-monitor
+cinst gmail-growl
+cinst wolfpack
+cinst socialsafe
+cinst grepwin
+cinst itunes
+cinst lastpass
+cinst jdownloader -Pre
+cinst malwarebytes
+cinst pspad
+cinst kdiff3
+cinst sublimetext3
+cinst sublimetext2
+cinst intellijidea-community
+cinst startmenu8
+cinst speccy
+cinst skype
+
  
 Install-WindowsUpdate -acceptEula
- 
-Install-ChocolateyFileAssociation ".txt" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".xml" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".nuspec" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".mp3" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".mp3" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".mp3" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".mp3" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
-Install-ChocolateyFileAssociation ".mp3" "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
+
+Install-ChocolateyFileAssociation ".txt" "$env:programfiles\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".xml" "$env:programfiles\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".nuspec" "$env:programfiles\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".mp3" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".mp4" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".aac" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".wma" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".vorbis" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".opus" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".wavpack" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".wav" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".aiff" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".musepack" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".speex" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".au" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".snd" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".cd" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyFileAssociation ".flac" "$env:programfiles\foobar2000\foobar2000.exe"
+Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:localappdata\Google\Chrome\Application\chrome.exe"
-Install-ChocolateyPinnedTaskBarItem "$env:windir\explorer.exe"
+Install-ChocolateyPinnedTaskBarItem "$env:programfiles\foobar2000\foobar2000.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\KeePass Password Safe 2\KeePass.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Notepad++\notepad++.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Evernote\Evernote\Evernote.exe"
-Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Notepad++\Notepad++.exe"
 
 Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/112013/6/PowerShellTools.vsix
 
